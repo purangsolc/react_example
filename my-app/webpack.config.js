@@ -1,11 +1,14 @@
 const path = require('path');
 const HWP = require('html-webpack-plugin');
 module.exports = {
-   entry: path.join(__dirname, '/src/index.js'),
-   output: {
+    entry: path.join(__dirname, '/src/index.js'),
+    output: {
        filename: 'build.js',
-       path: path.join(__dirname, '/dist')},
-   module:{
+       path: path.join(__dirname, '/dist'),
+       library: ["MyLib"],
+       libraryTarget: "umd"
+    },
+    module:{
       rules:[{
         test: /\.js$/,
         exclude: /node_modules/,
@@ -24,10 +27,10 @@ module.exports = {
             'css-loader'
         ]
       }]
-   },
-   plugins:[
+    },
+    plugins:[
        new HWP(
           {template: path.join(__dirname,'/src/index.html')}
        )
-   ]
+    ]
 }

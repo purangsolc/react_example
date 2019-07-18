@@ -7,6 +7,14 @@
      <title>React app</title>
 </head>
 <body>
-      <div id="root"></div>
+      <div id="container"></div>
 </body>
 </html>
+
+      <script>
+      	MyLib.widgets.myWidget.render({ selector: "#container"})
+      	// MyLib.config({ CONFIG_OPTION : {} })
+      	// Instance = MyLib.widgets.myWidget.new({ CONFIG_OPTION : Value })
+      	// Instance.on("SOME_EVENT", ()=> CALLBACK);
+      	// Instance.render({ selector: "#container"})
+      </script>

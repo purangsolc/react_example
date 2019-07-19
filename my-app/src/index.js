@@ -1,21 +1,17 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyWidget from './mywid/MyWidget';
+import BlixtWidget from './blixt/BlixtWidget';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-export default {
-	config: function(config) {
-    	LibConfig = config;
-  	},
-	widgets: {
-	   myWidget: {
-	   		render: (args) => {
-          ReactDOM.render(
-              <App />
-          );
-      }
-	   }
-	}
-}
+export default {widgets: {
+   blixtWidgetLib: {
+   		render: (args) => {
+          	ReactDOM.render(<BlixtWidget />, document.getElementById(args));
+  		}
+   },
+   myWidgetLib: {
+   		render: (args) => {
+          	ReactDOM.render(<MyWidget />, document.getElementById(args));
+  		}
+   }
+}}

@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyWidget from './mywid/MyWidget';
 import BlixtWidget from './blixt/BlixtWidget';
+import ClockWidget from './clock/ClockWidget';
 
 export default {widgets: {
-   blixtWidgetLib: {
+   blixtWidget: {
    		render: (args) => {
           	ReactDOM.render(<BlixtWidget />, document.getElementById(args));
   		}
    },
-   myWidgetLib: {
+   clockWidget: {
    		render: (args) => {
-          	ReactDOM.render(<MyWidget />, document.getElementById(args));
+          	ReactDOM.render(<ClockWidget />, document.getElementById(args));
   		}
    }
 }}
